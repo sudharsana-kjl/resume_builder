@@ -12,8 +12,8 @@ class MyBackend(object):
                 user = User(username = username, password = 'nope')
                 user.save()
             return user
-        except Exception, e:
-            print e
+        except Exception as e:
+            print(e)
             return None
 
     def get_user(self, user_id):
