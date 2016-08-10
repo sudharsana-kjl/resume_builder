@@ -32,7 +32,7 @@ def about(request):
 def my_resume(request):
 	if request.user.is_authenticated:
 		resume = Resume.objects.filter(user = request.user)
-		print resume
+		print(resume)
 		if len(resume) != 0:
 			result = {'status' : True, 'resume' : resume[0]}
 		else:
